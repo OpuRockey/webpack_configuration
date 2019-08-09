@@ -1,8 +1,15 @@
 const HtmlWebPackPlugin = require ('html-webpack-plugin');
 const MiniCssExtractPlugin = require ('mini-css-extract-plugin');
+const webpack = require('webpack');
+const path = require('path');
 
 
 module.exports = {
+    entry: './src/index.js',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'main.js'
+    },
     module: {
         rules: [
             {
@@ -42,6 +49,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.ProgressPlugin(),
         new HtmlWebPackPlugin({
             template: "./src/index.html",
             filename: "./index.html"
