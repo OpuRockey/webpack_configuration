@@ -52,8 +52,14 @@ final class WP_React_Sratup {
     }
 
     public function add_menu_pages ( ) {
+        global $submenu;
+
         add_menu_page( __( 'WP React', 'wp-react' ),  __( 'WP React', 'wp-react' ), 'manage_options', 'wp_react', [ $this, 'wp_react'],'',5 );
-        add_submenu_page( 'wp_react', __( 'Add Sub page', 'wp-react' ), __( 'Add Sub page', 'wp-react' ), 'manage_options', 'wp_react_subpage', [ $this, 'wp_react_subpage' ] );
+
+        $rootUrl = get_admin_url() . 'admin.php?page=wp_react#/';
+        $submenu['wp_react'][] = array( 'Dashboard', 'manage_options', $rootUrl );
+        $submenu['wp_react'][] = array( 'About', 'manage_options', $rootUrl . 'about' );
+        $submenu['wp_react'][] = array( 'Contact', 'manage_options', $rootUrl . 'contact' );
     }
 
     public function wp_react ( ) {

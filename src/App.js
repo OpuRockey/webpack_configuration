@@ -1,32 +1,28 @@
 import React, { Component } from "react";
-import Navigation from './components/Navigation' ;
 import Home from './components/Home' ;
 import About from './components/About' ;
 import Contact from './components/Contact' ;
 import Error from './components/Error' ;
-import { BrowserRouter, HashRouter , Route , Switch } from 'react-router-dom';
+import { HashRouter , Route , Switch } from 'react-router-dom';
+
+import store from './store/store';
 
 class App extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props);
+        console.log(store);
     }
+
     render() {
         return (
-            <div className="main-wrap">
+            <div className="wrap">
                 <HashRouter>
-                    <div className="inner-container">
-                        <div className="navigation">
-                            <Navigation/>
-                        </div>
-                        <div className="content-wrap">
-                            <Switch>
-                                <Route path="/" component={Home} exact/>
-                                <Route path="/about" component={About}/>
-                                <Route path="/contact" component={Contact}/>
-                                <Route component={Error}/>
-                            </Switch>
-                        </div>
-                    </div>
+                    <Switch>
+                        <Route path="/" component={Home} exact/>
+                        <Route path="/about" component={About}/>
+                        <Route path="/contact" component={Contact}/>
+                        <Route component={Error}/>
+                    </Switch>
                 </HashRouter>
             </div>
         )
