@@ -4,25 +4,17 @@ class Home extends Component {
 
     constructor(props) {
         super(props);
-        console.log(props)
-
         this.state = {
             title : 'My Dashboard',
         };
+        WPRC.setComponent( 'Home', this );
     }
 
     UNSAFE_componentWillMount() {
         console.log('UNSAFE_componentWillMount')
     }
     componentDidMount() {
-        let self = this;
         console.log('CcomponentDidMount')
-
-        setTimeout(function(){
-            self.setState({
-                title : 'Changed Dashboard'
-            });
-        },10000)
     }
     UNSAFE_componentWillReceiveProps(newProps) {
         console.log('CUNSAFE_componentWillReceiveProps -' , newProps)

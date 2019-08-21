@@ -4,13 +4,15 @@ import About from './components/About' ;
 import Contact from './components/Contact' ;
 import Error from './components/Error' ;
 import { HashRouter , Route , Switch } from 'react-router-dom';
-
-import store from './store/store';
+import './store/store';
 
 class App extends Component {
     constructor(props) {
         super(props);
-        console.log(store);
+        this.state = {
+            title : 'App'
+        };
+        WPRC.setComponent( 'App', this );
     }
 
     render() {
