@@ -23,7 +23,7 @@ class Navigation {
 
         $rootUrl = WP_REACT_ERP_ADMIN_URL;
         $submenu['wp_react_erp'][] = array( 'Dashboard', 'manage_options', $rootUrl );
-        $submenu['wp_react_erp'][] = array( 'HR', 'manage_options', $rootUrl . 'hr' );
+        $submenu['wp_react_erp'][] = array( 'HR', 'manage_options', $rootUrl . 'hrm' );
         $submenu['wp_react_erp'][] = array( 'CRM', 'manage_options', $rootUrl . 'crm' );
         $submenu['wp_react_erp'][] = array( 'Accounting', 'manage_options', $rootUrl . 'accounting' );
         $submenu['wp_react_erp'][] = array( 'Company', 'manage_options', $rootUrl . 'company' );

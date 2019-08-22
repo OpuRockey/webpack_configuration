@@ -3,7 +3,7 @@
  * Permission class is responsible for all kind of access control filter
  */
 
-namespace WP_ERP_REACT\Core\Helpers;
+namespace WP_ERP_REACT\Core\Includes;
 
 class Permission {
 
@@ -12,7 +12,7 @@ class Permission {
     }
 
     public static function has_permission(){
-        echo 'Granted';
+
     }
 
 }

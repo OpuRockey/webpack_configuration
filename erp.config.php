@@ -18,7 +18,9 @@ class ERP_Config {
     public function define_constant() {
         define( 'WP_REACT_ERP_BASE_PATH', plugin_dir_path(__FILE__) );
         define( 'WP_REACT_ERP_BASE_URL', plugin_dir_url(__FILE__) );
+        define( 'WP_REACT_ERP_BASE_FILE', 'index.php' );
         define( 'WP_REACT_ERP_ADMIN_URL', get_admin_url() . 'admin.php?page=wp_react_erp#/' );
+
     }
 
     /**
