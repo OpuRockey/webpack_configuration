@@ -1,16 +1,16 @@
 <?php
 /**
- * Plugin Name: WP React Start Up
- * Description: An Open Source React Start up solution
+ * Plugin Name: WP React ERP
+ * Description: An Open Source React ERP solution
  * Plugin URI: https://example.com
  * Author: weDevs
  * Author URI: https://example.com
  * Version: 1.0.0
  * License: GPL2
- * Text Domain: wp-react
+ * Text Domain: wp-erp
  * Domain Path: /i18n/languages/
  *
- * Copyright (c) 2016 wpReact (email: info@wpreact.com). All rights reserved.
+ * Copyright (c) 2016 wpReactERP (email: info@wpreact.com). All rights reserved.
  *
  * Released under the GPL license
  * http://www.opensource.org/licenses/gpl-license.php
@@ -40,38 +40,14 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-
-final class WP_React_Sratup {
+final class WP_React_ERP {
 
     public function __construct ( ) {
-        $this->actionCaller();
-    }
-
-    public function actionCaller ( ) {
-        add_action( 'admin_menu', [ $this, 'add_menu_pages' ] );
-    }
-
-    public function add_menu_pages ( ) {
-        global $submenu;
-
-        add_menu_page( __( 'WP React', 'wp-react' ),  __( 'WP React', 'wp-react' ), 'manage_options', 'wp_react', [ $this, 'wp_react'],'',5 );
-
-        $rootUrl = get_admin_url() . 'admin.php?page=wp_react#/';
-        $submenu['wp_react'][] = array( 'Dashboard', 'manage_options', $rootUrl );
-        $submenu['wp_react'][] = array( 'About', 'manage_options', $rootUrl . 'about' );
-        $submenu['wp_react'][] = array( 'Contact', 'manage_options', $rootUrl . 'contact' );
-    }
-
-    public function wp_react ( ) {
-        require_once 'public/root/index.php';
-    }
-
-    public function wp_react_subpage ( ) {
-        echo 'wp react main sub page';
+        require_once 'erp.config.php';
     }
 }
 
-new WP_React_Sratup();
+new WP_React_ERP();
 
 
 
