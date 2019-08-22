@@ -1,13 +1,31 @@
 import React, { Component } from "react";
+import Home from './components/Home' ;
+import About from './components/About' ;
+import Contact from './components/Contact' ;
+import Error from './components/Error' ;
+import { HashRouter , Route , Switch } from 'react-router-dom';
+import './store/store';
 
 class App extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props);
+        this.state = {
+            title : 'App'
+        };
+        WPRC.setComponent( 'App', this );
     }
+
     render() {
         return (
-            <div>
-                Hello
+            <div className="wrap">
+                <HashRouter>
+                    <Switch>
+                        <Route path="/" component={Home} exact/>
+                        <Route path="/about" component={About}/>
+                        <Route path="/contact" component={Contact}/>
+                        <Route component={Error}/>
+                    </Switch>
+                </HashRouter>
             </div>
         )
     }
