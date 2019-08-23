@@ -27,5 +27,11 @@ window.WPRC = {
             return axios[method]( url, data );
         }
         return axios[method]( url );
-    }
+    },
+
+    /*
+    * Jquery instances
+    * */
+
+    $ : jQuery,
 };

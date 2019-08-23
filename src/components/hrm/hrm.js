@@ -23,6 +23,8 @@ class Hrm extends Component {
                 event.target.parentNode.classList.add( 'active' );;
             } );
         });
+
+        console.log(WPRC.$);
     }
 
     render() {
