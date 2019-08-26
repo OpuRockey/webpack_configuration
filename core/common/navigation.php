@@ -3,7 +3,7 @@
  * All necessary navigation items will be registered and distributed thorugh this class
  */
 
-namespace WP_ERP_REACT\Core\Common;
+namespace Core\Common;
 
 
 class Navigation {
@@ -42,5 +42,3 @@ class Navigation {
     }
 
 }
-
-new Navigation();

@@ -3,7 +3,7 @@
  * Permission class is responsible for all kind of access control filter
  */
 
-namespace WP_ERP_REACT\Core\Includes;
+namespace Core\Includes;
 
 class Permission {
 

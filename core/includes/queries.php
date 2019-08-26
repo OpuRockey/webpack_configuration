@@ -3,7 +3,7 @@
  * All wpdb queries will be generated in here
  */
 
-namespace WP_ERP_REACT\Core\Includes;
+namespace Core\Includes;
 
 Class Queries {
 

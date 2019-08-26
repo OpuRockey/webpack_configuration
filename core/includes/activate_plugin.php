@@ -3,7 +3,7 @@
  * This class is responsible for activities of plugin activation
  */
 
-namespace WP_ERP_REACT\Core\Includes;
+namespace Core\Includes;
 
 class Activate {
 
@@ -764,5 +764,3 @@ class Activate {
 
 
 }
-
-new Activate();

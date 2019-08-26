@@ -3,7 +3,7 @@
  * All necessary css & js files will be loaded through this
  */
 
-namespace WP_ERP_REACT\Core\Common;
+namespace Core\Common;
 
 Class Script {
 
@@ -21,5 +21,3 @@ Class Script {
         wp_enqueue_style( 'wp_react_admin_css' );
     }
 }
-
-new Script();

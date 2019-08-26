@@ -3,7 +3,7 @@
  * This class is responsible for activities of plugin deactivation
  */
 
-namespace WP_ERP_REACT\Core\Includes;
+namespace Core\Includes;
 
 class Deactivate {
 
@@ -15,5 +15,3 @@ class Deactivate {
 
     }
 }
-
-new Deactivate();

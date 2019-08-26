@@ -1,0 +1,16 @@
+{
+    "name": "erp/erp",
+    "type": "project",
+    "authors": [
+        {
+            "name": "opurockey",
+            "email": "opu.rockey@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload" : {
+        "psr-4" : {
+            "Core\\": "core/"
+        }
+    }
+}

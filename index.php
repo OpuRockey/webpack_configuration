@@ -35,6 +35,9 @@
  * **********************************************************************
  */
 
+
+
+
 // don't call the file directly
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
@@ -43,7 +46,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 final class WP_React_ERP {
 
     public function __construct ( ) {
-        require_once 'erp.config.php';
+        $this->autoload();
+        $this->instantiate();
+    }
+
+    public function instantiate() {
+        new Core\Config\Config();
+        new Core\Common\Navigation();
+        new Core\Common\Script();
+    }
+
+    public function autoload() {
+        require_once 'vendor/autoload.php';
     }
 }
 
