@@ -54,6 +54,7 @@ final class WP_React_ERP {
         new Core\Config\Config();
         new Core\Common\Navigation();
         new Core\Common\Script();
+        new Core\Api\Global_Api();
     }
 
     public function autoload() {

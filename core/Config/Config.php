@@ -9,7 +9,6 @@ class Config {
 
     public function __construct() {
         $this->define_constant();
-        //$this->file_loaders();
     }
 
 
@@ -22,9 +21,6 @@ class Config {
         define( 'WP_REACT_ERP_BASE_URL', plugin_dir_url( realpath(dirname( __FILE__ ) . '/..' ) ) );
         define( 'WP_REACT_ERP_BASE_FILE', 'index.php' );
         define( 'WP_REACT_ERP_ADMIN_URL', get_admin_url() . 'admin.php?page=wp_react_erp#/' );
-
     }
 
 }
-
-//new ERP_Config();
